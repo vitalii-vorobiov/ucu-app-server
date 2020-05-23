@@ -112,6 +112,10 @@ def get_auth_token():
 def get_resource():
     return jsonify({'events': events})
 
+@app.route('/')
+def home():
+    return "<h1>UCU App Server v1.0<h1>"
+
 
 if __name__ == '__main__':
     if not os.path.exists('db.sqlite'):
